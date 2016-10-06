@@ -1,2 +1,4 @@
-# React
--web
+## 安装
+```
+bower install react babel --save
+```
