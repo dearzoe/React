@@ -1,8 +1,14 @@
 var Message= React.createClass({
     render: function () {
+        var totle=[];
+        for(var i=0;i<10;i++){
+            totle.push(
+                <Little key={"totle"+i}/>
+            )
+        }
         return <div>
                     <h1>HelloWorld!</h1>
-                    <Little/>
+                    {totle}
                </div>
     }
 });
