@@ -20,4 +20,4 @@ ReactDOM.render(
   <Message/>,
   document.getElementById("app")
 );
-/*..*/
+/*...*/
