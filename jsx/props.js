@@ -16,7 +16,6 @@ var Little=React.createClass({
        return <h1>{this.props.messages}</h1>
     }
 });
-/**/
 ReactDOM.render(
   <Message/>,
   document.getElementById("app")
