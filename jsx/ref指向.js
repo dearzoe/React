@@ -22,7 +22,7 @@ var Message = React.createClass({
                 <label className="bg-info">radio单选</label>
                 <br/>
                     <input type="radio" value="A"/>
-                    <input type="radio" value="B"/>
+                    <input type="radio" value="B" defaultChecked />
                     <input type="radio" value="C"/>
                 <br/>
                 <label className="bg-warning">checkbox多选</label>
