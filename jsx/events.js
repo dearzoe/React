@@ -20,7 +20,7 @@ var FormApp = React.createClass({
                         <option value="H">H</option>
                     </select>
                     <input name="haha" type="radio" value="A"/>
-                    <input name="haha" type="radio" defaultChecked value="B" />
+                    <input name="haha" type="radio" defaultChecked value="B"/>
                     <input name="haha" type="radio" value="C"/>
 
                </form>
