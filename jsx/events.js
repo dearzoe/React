@@ -6,10 +6,14 @@ var FormApp = React.createClass({
             rad:"B"
         }
     },
-    handleChange: function (e) {
+    handleInput: function (e) {
       this.setState({
-          inp:e.target.value,
-
+          inp:e.target.value
+      })
+    },
+    handleSelect: function (e) {
+      this.setState({
+         sel:e.target.value
       })
     },
     handleSubmit: function (e) {
@@ -19,8 +23,8 @@ var FormApp = React.createClass({
     },/*首先这里执行，不能加 括号（）*/
     render: function () {
         return <form onSubmit={this.handleSubmit}>
-                    <input type="text" value={this.state.inp} onChange={this.handleChange}/><br/>
-                    <select name="" id="" value={this.state.sel}>
+                    <input type="text" value={this.state.inp} onChange={this.handleInput}/><br/>
+                    <select name="" id="" value={this.state.sel} onChange={this.handleSelect}>
                         <option value="A">A</option>
                         <option value="B">B</option>
                         <option value="C">C</option>
