@@ -19,7 +19,8 @@ var FormApp = React.createClass({
           rad:this.state.rad
         };
         console.log("ok");
-        console.log(formData)
+        console.log(formData);
+        this.refs.some.say();
     },/*首先这里执行，不能加 括号（）*/
     render: function () {
         return <form onSubmit={this.handleSubmit}>
@@ -34,13 +35,23 @@ var FormApp = React.createClass({
                         <option value="G">G</option>
                         <option value="H">H</option>
                     </select><br/>
-                    <input onChange={this.handleRadio} name="haha" type="radio" value="A"/>
-                    <input onChange={this.handleRadio} name="haha" type="radio" defaultChecked value="B"/>
-                    <input onChange={this.handleRadio} name="haha" type="radio" value="C"/><br/>
+                    <RadioButton ref="some" handleRadio={this.handleRadio}/><br/>
                     <button type="submit">OK</button>
                </form>
     }
 });
+var RadioButton = React.createClass({
+    say: function () {
+      alert("大声说出来!")
+    },
+    render: function () {
+        return <span>
+                    <input onChange={this.props.handleRadio} name="haha" type="radio" value="A"/>
+                    <input onChange={this.props.handleRadio} name="haha" type="radio" defaultChecked value="B"/>
+                    <input onChange={this.props.handleRadio} name="haha" type="radio" value="C"/><br/>
+               </span>
+    }
+})
 
 ReactDOM.render(
     <FormApp/>,
