@@ -43,7 +43,7 @@ var FormApp = React.createClass({
                     <button type="submit">OK</button>
                </form>
     }
-});/**/
+});
 var RadioButton = React.createClass({
     say: function () {
       alert("大声说出来!")
