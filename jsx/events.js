@@ -2,8 +2,8 @@ var FormApp = React.createClass({
     getInitialState: function () {
         return {
             inp:"input value",
-            sel:"B",
-            rad:"B"
+            sel:"C",
+            rad:"C"
         }
     },
     handleRadio: function (e) {
