@@ -1,4 +1,4 @@
-var Add=React.createClass({
+var Add = React.createClass({
     getInitialState: function () {
         return {
             num:1
@@ -6,13 +6,13 @@ var Add=React.createClass({
     },
     number: function () {
       this.setState({
-          num:this.state.num+1,
+          num:this.state.num+1
       })
     },
     render: function () {
         return <span>
                   <div>{this.state.num}</div>
-                  <button disabled onClick={this.number}>+</button>
+                  <button onClick={this.number}>+</button>
                </span>
     }
 });
