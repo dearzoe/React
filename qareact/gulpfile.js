@@ -12,6 +12,22 @@ gulp插件
  实时预览 gulp-connect
 
 * */
+var gulp = require("gulp"),
+    connect = require("gulp-connect");
+gulp.task("server", function () {
+   connect.server({
+       root:"dist",
+       port:8888,
+       livereload:true
+   })
+});
+gulp.task("html", function () {
+   gulp.src("app/index2.html")
+    .pipe(gulp.dest("dist"))
+    .pipe(connect.reload())
+});
+gulp.task("default",["server","html"]);
+/*
 var gulp = require("gulp");
 var connect = require("gulp-connect");
 gulp.task("server", function () {
@@ -22,11 +38,11 @@ gulp.task("server", function () {
     })
 });
 gulp.task("html", function () {
-    gulp.src('app/*.html')
+    gulp.src('app/!*.html')
         .pipe(gulp.dest('dist'))
         .pipe(connect.reload())
 });
 gulp.task("watch",function(){
-    gulp.watch('app/*html',["html"])
+    gulp.watch('app/!*html',["html"])
 });
-gulp.task("default",["server","watch"]);
+gulp.task("default",["server","watch"]);*/
