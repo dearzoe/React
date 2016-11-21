@@ -55,7 +55,7 @@ gulp.task("server", function () {
         port:8080,//服务器的地址，没有此配置是8080
         livereload:true
     })
-});
+});/*。*/
 gulp.task("copy-html", function () {
     gulp.src('app/*.html')
         .pipe(gulp.dest('dist'))
