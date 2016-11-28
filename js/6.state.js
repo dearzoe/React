@@ -20,11 +20,11 @@ var Person = React.createClass({
         //注意 onClick绑定的是函数的定义而非执行结果
         return <p>
             {this.props.name}:{heart}<br/>
-            <button onClick={this.handleClick} >改变心情</button>
+            <button onClick={this.handleClick} className="btn-danger">改变心情</button>
         </p>
     }
 });
 ReactDOM.render(
-    <Person name="张怡宁"/>,
+    <Person name="胡文哲"/>,
     document.querySelector('#app')
 );
