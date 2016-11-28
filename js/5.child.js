@@ -4,12 +4,12 @@ var Person = React.createClass({
         return (<ul>
             {
               //把每个span映射成一个li
-              React.Children.map(this.props.children,function(item,index){
-                  return <li key={index}>{item}</li>
-              })
-             /* this.props.children.map(function(item,index){
+             /* React.Children.map(this.props.children,function(item,index){
                   return <li key={index}>{item}</li>
               })*/
+              this.props.children.map(function(item,index){
+                  return <li key={index}>{item}</li>
+              })
             }
         </ul>)
     }
