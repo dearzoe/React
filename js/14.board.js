@@ -1,4 +1,4 @@
-var Board = React.createClass({
+let Board = React.createClass({
     //定义初始状态
     getInitialState:function(){
         return {messages:this.props.messages};
@@ -7,9 +7,9 @@ var Board = React.createClass({
         event.target.value = '';
     },
     addMsg:function(){
-        var message = this.refs.txtMsg.value;
-        //var message = document.querySelector('#txtMsg').value;
-        var messages = this.state.messages;//先取出原来的数组
+        let message = this.refs.txtMsg.value;
+        //let message = document.querySelector('#txtMsg').value;
+        let messages = this.state.messages;//先取出原来的数组
         messages.push(message);//向此数组中添加新的留言
         // setState是一个异步方法,如果要获取设置之后的最新的state值要在回调函数中获取
         localStorage.setItem('messages',JSON.stringify(messages));
@@ -42,7 +42,7 @@ var Board = React.createClass({
     }
 });
 //读取localStorage的值
-var data = {
+let data = {
     msg:'请留言',
     messages: localStorage.getItem('messages')?JSON.parse(localStorage.getItem('messages')):[]
 }
