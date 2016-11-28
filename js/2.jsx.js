@@ -10,7 +10,7 @@
  */
 
 var names = ['张三','李四','王楠'];
-var style = {color:'red'};
+var style = {color:'yellow'};
 ReactDOM.render(
     <div>
         {
