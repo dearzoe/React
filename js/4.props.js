@@ -3,7 +3,7 @@
  * Person是一个组件名称
  *
  */
-var Person = React.createClass({
+let Person = React.createClass({
     //定义传递给组件的属性的类型，是否是否必传
     propTypes:{
         //定义名称必须传入，并是字符串
@@ -31,10 +31,10 @@ var Person = React.createClass({
  * 在渲染组件的时候可以向它里面传入属性
  * 这样的话组件的实例就拥有属性对象
  */
-var props = {
+let props = {
     name:"zfpx",
-    gender:'女'
-}
+    gender:"女"
+};
 ReactDOM.render(
     //<Person name="zfpx" gender="男"  />,
     <Person {...props} />,
