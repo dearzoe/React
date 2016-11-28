@@ -1,7 +1,7 @@
-var Input = React.createClass({
+let Input = React.createClass({
     //定义初始状态
     getInitialState:function(){
-      return {value:'zfpx'};
+      return {value:'huwenzhe-zfpx'};
     },
     //处理input元素值改变事件
     handleChange:function(event){
