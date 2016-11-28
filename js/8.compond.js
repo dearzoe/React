@@ -2,7 +2,7 @@
  * 复合组件
  */
 
-var Panel = React.createClass({
+let Panel = React.createClass({
     render:function(){
         return <div className="panel panel-success">
                 <PanelHead head={this.props.head}></PanelHead>
@@ -15,7 +15,7 @@ var Panel = React.createClass({
 
 
 
-var PanelHead = React.createClass({
+let PanelHead = React.createClass({
     render:function(){
         return <div className="panel-heading">
                     {this.props.head}
@@ -23,7 +23,7 @@ var PanelHead = React.createClass({
     }
 });
 
-var PanelBody = React.createClass({
+let PanelBody = React.createClass({
     render:function(){
         return <div className="panel-body">
             {this.props.body}
@@ -31,7 +31,7 @@ var PanelBody = React.createClass({
     }
 });
 
-var PanelFooter = React.createClass({
+let PanelFooter = React.createClass({
     render:function(){
         return <div className="panel-footer">
             {this.props.footer}
