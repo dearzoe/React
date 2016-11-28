@@ -16,6 +16,7 @@ var Message = React.createClass({
     },
     //从指定的DOM节点上移除掉此组件
     killMyself:function(){
+        alert("将要被移除移除此组件");
         ReactDOM.unmountComponentAtNode(document.querySelector('#app'));
     },
     componentWillUnmount:function(){
@@ -28,10 +29,10 @@ var Message = React.createClass({
     render:function(){
         console.log('4. 渲染到界面上','render');
         return <div>
-            计数:{this.state.count}<br/>
-            <button onClick={this.handleClick}>更新</button><br/>
-            <button onClick={this.killMyself}>移除</button>
-            子组件 <SubMessage count={this.state.count}></SubMessage>
+            计数:<br/>{this.state.count}<br/>
+            <button onClick={this.handleClick} className="btn btn-success">更新</button><br/>
+            <button onClick={this.killMyself} className="btn btn-danger">移除</button><br/>
+            子组件 <br/><SubMessage count={this.state.count}></SubMessage>
         </div>
     },
     componentDidMount:function(){
@@ -58,11 +59,11 @@ var Message = React.createClass({
 var SubMessage = React.createClass({
     //组件得到新的更新后的属性值
     componentWillReceiveProps:function(){
-        console.log('SubMessage ','componentWillReceiveProps');
+        console.log('子组件将接收新的属性','componentWillReceiveProps');
     },
     //询问此组件是否需要更新
     shouldComponentUpdate:function(toProps,toState){
-        console.log('SubMessage ','shouldComponentUpdate');
+        console.log('子组件是否需要更新','shouldComponentUpdate');
        if(toProps.count<=5){
            return true;
        }else{
@@ -70,7 +71,7 @@ var SubMessage = React.createClass({
        }
     },
     render:function(){
-        console.log('SubMessage ','render');
+        console.log('子组件渲染','render');
         return <div>{this.props.count}</div>
     }
 });

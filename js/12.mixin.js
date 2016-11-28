@@ -1,5 +1,5 @@
 //可以把许多组件中的公用逻辑抽取出来放在一个mixin中
-var mix = {
+let mix = {
     getInitialState:function(){
         return {count:3};
     },
@@ -7,7 +7,7 @@ var mix = {
         this.setState({count:this.state.count+1});
     }
 };
-var Counter1 = React.createClass({
+let Counter1 = React.createClass({
     mixins:[mix],//在此引用mixin
     render:function(){
         return <div>
@@ -16,7 +16,7 @@ var Counter1 = React.createClass({
         </div>
     }
 });
-var Counter2 = React.createClass({
+let Counter2 = React.createClass({
     mixins:[mix],
     render:function(){
         return <div>
@@ -26,6 +26,6 @@ var Counter2 = React.createClass({
     }
 });
 ReactDOM.render(<div>
-    <Counter1></Counter1>
-    <Counter2></Counter2>
+    <Counter1/>
+    <Counter2/>
 </div>,document.querySelector('#app'));
