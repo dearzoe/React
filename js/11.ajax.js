@@ -26,7 +26,6 @@ let Suggest = React.createClass({
                 this.setState({content:words});
             }
         });
-
     },
     render:function(){
         return <div>
