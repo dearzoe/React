@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bootstrap</title>
+</head>
+<link rel="stylesheet" href="../bootstrap/bower_components/bootstrap/dist/css/bootstrap.min.css">
+<meta name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<body>
+<div class="container">
+    <ul class="nav nav-tabs" role="tablist">
+        <li role="presentation" class="active"><a href="#">主页</a></li>
+        <li role="presentation"><a href="https://github.com/dearzoe">github</a></li>
+    </ul>
+    <div class="page-header">
+        <h1>图片站<small>美图</small></h1>
+    </div>
+    <div class="row">
+        <div class="col-xs-6 col-md-3">
+            <a href="#" class="thumbnail">
+                <img src="../bootstrap/1.jpg" alt="...">
+            </a>
+        </div>
+        <div class="col-xs-6 col-md-3">
+            <a href="#" class="thumbnail">
+                <img src="../bootstrap/1.jpg" alt="...">
+            </a>
+        </div>
+        <div class="col-xs-6 col-md-3">
+            <a href="#" class="thumbnail">
+                <img src="../bootstrap/1.jpg" alt="...">
+            </a>
+        </div>
+        <div class="col-xs-6 col-md-3">
+            <a href="#" class="thumbnail">
+                <img src="../bootstrap/1.jpg" alt="...">
+            </a>
+        </div>
+    </div>
+</div>
+
+<script>
+    function li(a,b,c){
+        debugger;
+        var I=arguments.length;
+        var num=0;
+        for(var i=0;i<I.length;i++){//这个I的length重复了
+            num+=arguments[i];
+        }
+        alert(num);
+    }
+    li(1,2,3);
+    li(1,2,3,4);
+</script>
+
+<script src="../bootstrap/bower_components/jquery/dist/jquery.min.js"></script>
+<script src="../bootstrap/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
