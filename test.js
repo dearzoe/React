@@ -4,4 +4,4 @@ var a = function(){
 a();
 function b(){
     console.log('b');
-}/
+}
